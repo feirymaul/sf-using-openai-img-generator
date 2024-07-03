@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Image Generator">
+        <lightning-layout multiple-rows class="slds-is-relative slds-var-p-around_small">
+            <lightning-layout-item size="6">
+                <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="loading"></lightning-spinner>
+                </template>
+                <h1>model: dall-e-3</h1>
+                <lightning-textarea label="prompt" onchange={handlePromptChange}></lightning-textarea>
+                <div class="slds-var-p-top_medium">
+                    <lightning-button  label="Generate" onclick={generateImageHandler}></lightning-button>
+                </div>
+                <template if:true={imageUrl}>
+                    <div class="slds-var-p-top_medium">
+                        <div >
+                            {revisedPrompt}
+                        </div>
+                        <img loading="lazy" src={imageUrl}/>
+                    </div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable">
+<c:imageGeneratorLWC></c:imageGeneratorLWC>
+</aura:component>	
