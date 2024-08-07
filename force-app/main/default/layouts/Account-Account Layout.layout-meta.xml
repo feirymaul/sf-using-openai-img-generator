@@ -9,6 +9,10 @@
         <editHeading>true</editHeading>
         <label>Account Information</label>
         <layoutColumns>
+<layoutItems>
+                <behavior>Edit</behavior>
+                <field>AccountSource</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
